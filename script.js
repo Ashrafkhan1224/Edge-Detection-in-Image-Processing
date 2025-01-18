@@ -208,6 +208,7 @@ function performScharr() {
   let dst = new cv.Mat();
   cv.cvtColor(src, src, cv.COLOR_RGBA2GRAY, 0);
 
+
   cv.Scharr(src, dstX, cv.CV_8U, 1, 0);
   cv.Scharr(src, dstY, cv.CV_8U, 0, 1);
   cv.addWeighted(dstX, 0.5, dstY, 0.5, 0, dst);
